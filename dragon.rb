@@ -1,4 +1,4 @@
-require './Character'
+require './character'
 class Dragon < Character
 
 end
