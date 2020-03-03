@@ -1,8 +1,8 @@
 require './brave'
 require './dragon'
 
-brave = Brave.new(name:"shota",hp:200,offence:50,defence:40)
-dragon = Dragon.new(name:"竜王",hp:190,offence:35,defence:45)
+brave = Brave.new(name:"shota",hp:200,offence:77,defence:40)
+dragon = Dragon.new(name:"竜王",hp:190,offence:65,defence:45)
 
 
 puts <<EOS
@@ -19,5 +19,9 @@ H P：#{dragon.hp}
 ===================
 EOS
 
-brave.atack(dragon)
-dragon.atack(brave)
+while brave.hp && dragon.hp > 0
+  brave.attack(dragon)
+  break if dragon.hp <= 0
+  dragon.attack(brave)
+end
+puts "#{dragon.name}を倒した！"

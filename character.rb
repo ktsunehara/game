@@ -8,5 +8,5 @@ class Character
     @offence = params[:offence]
     @defence = params[:defence]
   end
-  
+
 end
