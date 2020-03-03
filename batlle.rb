@@ -20,3 +20,4 @@ H P：#{dragon.hp}
 EOS
 
 brave.atack(dragon)
+dragon.atack(brave)

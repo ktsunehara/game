@@ -1,12 +1,10 @@
-require './character'
-require './brave'
+  # require './character'
+# require './brave'
 
 class Dragon < Character
-  def power
-    puts "#{@name}の攻撃力は#{@offence}だ"
+  def atack(brave)
+    puts "#{@name}の攻撃"
+    damage = @offence - brave.defence
+    puts "#{brave.name}は#{damage}のダメージを受けた！!"
   end
-  def defensive
-    puts "#{@name}の守備力は#{@defence}だ"
-  end
-
 end
